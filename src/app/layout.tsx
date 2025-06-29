@@ -6,18 +6,21 @@ import clsx from "clsx";
 const dmSans = DM_Sans({
   variable: "--font-dmSans-sans",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
   display: "swap"
 });
 
 const workSans = Work_Sans({
-  variable: "--font-workSans-mono",
+  variable: "--font-workSans-sans",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
   display: "swap"
 });
 
 export const metadata: Metadata = {
-  title: "Saas Landing Page",
-  // write a description
+  title: "🚀LAUNCHKIT - The SaaS Template That Breaks The Internet",
   description: "Saas Landing Page with Next.js🤐",
 };
 
@@ -28,10 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        // ${geistSans.variable}, ${geistMono.variable} 'antialiased'
-        className={clsx(dmSans.variable, workSans.variable, "antialiased")}
-      >
+      <body className={clsx(dmSans.variable, workSans.variable, "antialiased", "font-sans")}>
         {children}
       </body>
     </html>

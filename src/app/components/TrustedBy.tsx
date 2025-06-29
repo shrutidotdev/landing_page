@@ -18,18 +18,23 @@ const TrustedByImges = [
 
 const TrustedBy = () => {
   return (
-    <section className="bg-black text-white py-[72px]">
-        {/*   mx-auto flex flex-col justify-center items-center */}
-      <div className="container">
-        <h1 className="text-[#7A7A7A] font-meium ">
+    <section className="bg-black text-white  ">
+      {/*   mx-auto flex flex-col justify-center items-center */}
+      <div className="container  mx-auto">
+        <h1 className="text-[#7A7A7A] font-medium text-center text-xl">
           Trusted by the world’s most innovative teams
         </h1>
 
-        <div className="overflow-hidden">
-          <div className="flex gap-16">
+        <div className="overflow-hidden mt-10 relative before:content-[''] after:content-[''] before:absolute after:absolute after:h-full before:h-full before:w-5 after:w-20 before:left-0 after:right-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right,_#000,_rgba(0,0,0,0))] after:bg-[linear-gradient(to_left,_#000,_rgba(0,0,0,0))]">
+          <div className="flex flex-wrap justify-center items-center gap-16">
             {TrustedByImges.map(({ name, img }) => (
-            <Image key={name} src={img} alt={name} className="flex-none h-8 w-auto " />
-          ))}
+              <Image
+                key={name}
+                src={img}
+                alt={name}
+                className="flex-none h-8 w-auto "
+              />
+            ))}
           </div>
         </div>
       </div>

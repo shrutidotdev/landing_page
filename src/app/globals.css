@@ -1,12 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --font-family-sans: var(--font-workSans-sans), var(--font-dmSans-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
 @tailwind utilities;
 
-
-/* @theme {
-  --font-family-sans: var(--font-dmSans-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-family-mono: var(--font-workSans-mono), ui-monospace, monospace;
-} */
- 
 .container {
-  @apply p-[1rem]
+  @apply p-4;
 }
