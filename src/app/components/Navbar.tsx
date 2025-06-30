@@ -64,10 +64,12 @@ const Navbar = () => {
           </div>
         )}
         {/* Logo */}
-        <div className="relative">
+       
+        <Link href="/">
+<div className="relative">
           <div className="absolute w-full top-2 bottom-0 bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] blur"></div>
           <Image src={logosaas} alt="logosaas" className="h-12 w-12 relative" />
-        </div>
+        </div>        </Link>
 
         {/* Mobile Navigation */}
         <button

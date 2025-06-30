@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Plus from "../../icons/plus.svg";
 import Minus from "../../icons/minus.svg";
 import clsx from "clsx";
+import { AnimatePresence, motion } from "framer-motion";
 
 const items = [
   {
@@ -27,7 +28,13 @@ const items = [
   },
 ];
 
-const AccordionItems = ({ question, answer }: { question: string; answer: string }) => {
+const AccordionItems = ({
+  question,
+  answer,
+}: {
+  question: string;
+  answer: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -39,35 +46,43 @@ const AccordionItems = ({ question, answer }: { question: string; answer: string
         <h3 className="font-medium text-lg sm:text-xl transition-colors duration-300 group-hover:text-purple-200">
           {question}
         </h3>
-        <div className={clsx(
-          "transition-all duration-300 ease-in-out transform",
-          {
-            "rotate-180": isOpen,
-            "rotate-0": !isOpen
-          }
-        )}>
-          {isOpen ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+        <div
+          className={clsx("transition-all duration-300 ease-in-out transform", {
+            "rotate-45": isOpen,
+            "rotate-0": !isOpen,
+          })}
+        >
+          <Plus className="w-5 h-5" />
         </div>
       </div>
-      
-      <div className={clsx(
-        "overflow-hidden transition-all duration-400 ease-in-out",
-        {
-          "max-h-0 opacity-0 mt-0": !isOpen,
-          "max-h-96 opacity-100 mt-4": isOpen
-        }
-      )}>
-        <div className="text-sm sm:text-base text-white/70 leading-relaxed">
-          {answer}
-        </div>
-      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0, marginTop: 0 }}
+            animate={{ height: "auto", opacity: 1, marginTop: "16px" }}
+            exit={{ height: 0, opacity: 0, marginTop: 0 }}
+            transition={{ 
+              duration: 0.3, 
+              ease: "easeInOut",
+              height: { duration: 0.3 },
+              opacity: { duration: 0.2 },
+              marginTop: { duration: 0.3 }
+            }}
+          >
+            <div className="text-sm sm:text-base text-white/70 leading-relaxed">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
 const FAQ = () => {
   return (
-    <div className="min-h-[600px] bg-gradient-to-t from-black to-[#5D2CAB] flex justify-center items-center py-12 sm:py-16 lg:py-20">
+    <div className="min-h-screen bg-gradient-to-t from-black to-[#9743ff] flex flex-col justify-center items-center py-12 sm:py-16 lg:py-20 relative overflow-hidden">
       <div className="w-full">
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tighter mb-4 sm:mb-6">

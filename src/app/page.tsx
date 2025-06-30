@@ -9,7 +9,7 @@ import TrustedBy from "./components/TrustedBy";
 
 export default function Home() {
   return (
-    <main className="font-sans ">
+    <main className=" overflow-hidden ">
       <Banner />
       <Navbar />
       <Hero />

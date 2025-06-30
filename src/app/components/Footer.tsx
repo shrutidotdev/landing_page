@@ -1,14 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Me from "../../images/me.png";
 import HelixImage from "../../images/helix2.png";
 import EmojiStar from "../../images/emojistar.png";
 import Link from "next/link";
 import toast, { Toaster } from 'react-hot-toast';
+import { useScroll } from "framer-motion";
 
 const Footer = () => {
   const [email, setEmail] = useState<string>("");
+
 
   function handleSubmit(e: React.ChangeEvent<HTMLInputElement>) {
     e.preventDefault();
@@ -26,7 +28,7 @@ const Footer = () => {
     setEmail("");
   }
   return (
-    <footer>
+    <footer >
        <Toaster 
         position="top-center"
         toastOptions={{
@@ -51,43 +53,7 @@ const Footer = () => {
         </div>
 
        
-        <div className="absolute inset-0 ">
-          {/* Helix Image */}
-          <Image
-            src={HelixImage}
-            alt="cursorImg"
-            className="hidden lg:block absolute top-1/4 right-[5%] xl:right-[10%] 2xl:right-[15%] rotate-12"
-            width={250}
-            height={150}
-          />
-          
-          {/* Emoji Star */}
-          <Image
-            src={EmojiStar}
-            alt="messageImg"
-            className="hidden lg:block absolute top-[10%] left-[5%] xl:left-[10%] 2xl:left-[15%]"
-            width={220}
-            height={220}
-          />
-          
-          {/* Additional smaller decorative elements for medium screens */}
-          <Image
-            src={HelixImage}
-            alt="cursorImg"
-            className="hidden md:block lg:hidden absolute top-[20%] right-[2%] rotate-45 opacity-40"
-            width={80}
-            height={80}
-          />
-          
-          <Image
-            src={EmojiStar}
-            alt="messageImg"
-            className="hidden md:block lg:hidden absolute bottom-[20%] left-[2%] rotate-[-15deg] opacity-40"
-            width={70}
-            height={70}
-          />
-        </div>
-
+        
        
         <div className="flex flex-col sm:flex-row mt-6 sm:mt-8 lg:mt-10 gap-3 w-full max-w-sm sm:max-w-md mx-auto z-10 relative px-4">
           <input
@@ -105,7 +71,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Responsive bottom section */}
+      {/* Footer bottom section */}
       <div className="bg-gradient-to-r from-black to-[#5D2CAB] px-4 sm:px-6 lg:px-8 xl:px-14 min-h-[60px] sm:min-h-[70px] flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-2 sm:gap-0 border-t border-white/20">
        <Link
        href={'https://shruti.dev/'}
