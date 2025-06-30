@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import React from "react";
 import Arrow from "../../icons/arrow-w.svg";
 import cursorImg from "../../images/cursor.png";
@@ -52,7 +51,7 @@ const Hero = () => {
             {/* Description */}
       <div className="max-w-xs mt-2 sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto">
               <p className="text-md sm:text-sm md:text-lg lg:text-xl text-white/70 leading-relaxed px-4 ">
-               LaunchKit isn't just another template—it's your unfair advantage in the SaaS arms race. While competitors spend 6 months on landing pages, you'll ship in 6 hours. While they hire $200/hour developers, you'll build like a Silicon Valley veteran.
+               LaunchKit isn&apos;t just another template—it&apos;s your unfair advantage in the SaaS arms race. While competitors spend 6 months on landing pages, you&apos;ll ship in 6 hours. While they hire $200/hour developers, you&apos;ll build like a Silicon Valley veteran.
               </p>
             </div>
 

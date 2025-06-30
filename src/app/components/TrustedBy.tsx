@@ -23,7 +23,7 @@ const TrustedBy = () => {
     <section className="bg-black text-white">
       <div className="container mx-auto">
         <h1 className="text-[#7A7A7A] mt-10 font-medium text-center text-lg">
-          Trusted by the world's most innovative teams
+          Trusted by the world&apos;s most innovative teams
         </h1>
 
         <div className="overflow-hidden mt-20 relative before:content-[''] after:content-[''] before:absolute after:absolute after:h-full before:h-full before:w-20 after:w-20 before:left-0 after:right-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_right,_#000,_rgba(0,0,0,0))] after:bg-[linear-gradient(to_left,_#000,_rgba(0,0,0,0))] before:z-10 after:z-10">

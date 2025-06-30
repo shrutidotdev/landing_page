@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Plus from "../../icons/plus.svg";
-import Minus from "../../icons/minus.svg";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 

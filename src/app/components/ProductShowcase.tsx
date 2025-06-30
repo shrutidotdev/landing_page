@@ -56,7 +56,7 @@ const ProductShowcase = () => {
             <p className="text-center text-sm sm:text-base md:text-lg lg:text-xl text-white/70 leading-relaxed px-2 sm:px-0">
               Every day you spend on design is a day competitors gain market
               share. Every week you code from scratch is a week you could be
-              talking to customers. Every month you delay is revenue you'll
+              talking to customers. Every month you delay is revenue you&apos;ll
               never recover.
             </p>
           </motion.div>

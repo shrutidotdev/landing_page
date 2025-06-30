@@ -1,12 +1,10 @@
 "use client";
-import React, { use, useEffect, useRef, useState } from "react";
+import React, {  useState } from "react";
 import Image from "next/image";
 import Me from "../../images/me.png";
-import HelixImage from "../../images/helix2.png";
-import EmojiStar from "../../images/emojistar.png";
 import Link from "next/link";
 import toast, { Toaster } from 'react-hot-toast';
-import { useScroll } from "framer-motion";
+
 
 const Footer = () => {
   const [email, setEmail] = useState<string>("");
@@ -47,7 +45,7 @@ const Footer = () => {
           </h2>
           <div className="max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto">
             <p className="text-center text-sm sm:text-base md:text-lg lg:text-xl text-white font-semibold leading-relaxed px-4">
-              LaunchKit doesn't just save you time—it gives you your unfair advantage back. Get in touch with us today and experience the power of LaunchKit.
+              LaunchKit doesn&apos;t just save you time—it gives you your unfair advantage back. Get in touch with us today and experience the power of LaunchKit.
             </p>
           </div>
         </div>

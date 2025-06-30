@@ -11,7 +11,7 @@ const featureSections : Props[] = [
    
     title: "🚀Lightning-Fast Deployment",
     description:
-      `Next.js 14, TypeScript, Tailwind CSS, Framer Motion. Deploy to Vercel in 3 clicks. Go from download to live site faster than your competition can say "coming soon."`,
+      "Next.js 14, TypeScript, Tailwind CSS, Framer Motion. Deploy to Vercel in 3 clicks. Go from download to live site faster than your competition can say &quot;coming soon&quot;",
   },
   {
    
@@ -38,7 +38,7 @@ const Features = () => {
           </h2>
           <div className="max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto">
             <p className="text-center text-sm sm:text-base md:text-lg lg:text-xl text-white/70 leading-relaxed px-2 sm:px-0">
-             Forget cookie-cutter designs that scream "template." LaunchKit delivers Silicon Valley-grade aesthetics with conversion rates that make marketing teams weep tears of joy.
+             Forget cookie-cutter designs that scream &quot;template&quot; LaunchKit delivers Silicon Valley-grade aesthetics with conversion rates that make marketing teams weep tears of joy.
             </p>
           </div>
         </div>
